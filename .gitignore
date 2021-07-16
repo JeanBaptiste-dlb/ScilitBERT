@@ -2,3 +2,9 @@ ScilitBERT
 ScilitBERT.zip
 .vscode
 README.pdf
+Journal-Finder
+Journal-Finder.zip
+results
+logs
+evaluation_results/journal_finder_output.csv
+data
