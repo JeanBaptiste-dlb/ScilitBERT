@@ -6,5 +6,5 @@ Journal-Finder
 Journal-Finder.zip
 results
 logs
-evaluation_results/journal_finder_output.csv
+evaluation_results/*
 data
