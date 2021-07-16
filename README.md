@@ -13,7 +13,7 @@ ScilitBERT is a BERT model for academic language representation developed by [MD
 
 ## Getting started
 
-1. Download a zip file containing ScilitBERT pretrained and its tokenizer at the link below: [res.mdpi.com/data/ScilitBERT_plus_tokenizer.zip](res.mdpi.com/data/ScilitBERT_plus_tokenizer.zip)
+1. Download a zip file containing ScilitBERT pretrained and its tokenizer at the link below: [res.mdpi.com/data/ScilitBERT_plus_tokenizer.zip](https://res.mdpi.com/data/ScilitBERT_plus_tokenizer.zip)
 
 To run the notebook you can unzip the downloaded file in the root of this repository.
 
@@ -29,9 +29,10 @@ pip install -r ./requirements.txt
 4. You can now run the notebook: [notebooks/example_mlm.ipynb](./notebooks/example_mlm.ipynb)
 
 ## Fine-Tuning on the Journal Finder task
++ The dataset for the Journal Finder task is available here: [https://res.mdpi.com/data/journal-finder.zip](https://res.mdpi.com/data/journal-finder.zip)
 
-+ A fine-tuning quick start notebook on the Journal Finder task is given:
-+ We add a basic fine-tuning example notebook: [fine tuning example](./notebooks/fine_tuning_journal_finder.ipynb)
++ A fine-tuning quick start notebook on the Journal Finder task is given: [fine tuning example](./notebooks/fine_tuning_journal_finder.ipynb)
+
   
 The hyper-parameters can be managed in the fine-tune function found in [utils](./notebooks/utils.py).
 
