@@ -62,6 +62,12 @@ def fine_tune(tokenizer,model,dataset,model_name,log_dir,output_dir,num_labels):
         trainer.train()
     
     model=RobertaForSequenceClassification.from_pretrained(output_dir+os.listdir(output_dir)[0],num_labels=num_labels)
+    trainer = Trainer(
+        model= model,                                
+        args= training_args,                           # training arguments, defined above
+        train_dataset=dataset_["train"],         # training dataset
+        eval_dataset=dataset_["valid"],  
+    )
     preds=trainer.predict(dataset_["test"])
     write_results(model_name, preds[0],10, dataset_["test"])
     return trainer, preds
