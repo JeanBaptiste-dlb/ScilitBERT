@@ -13,9 +13,23 @@ ScilitBERT is a BERT model for academic language representation developed by [MD
 
 ## Getting started
 
-1. Download a zip file containing ScilitBERT pretrained and its tokenizer at the link below: [res.mdpi.com/data/ScilitBERT_plus_tokenizer.zip](https://res.mdpi.com/data/ScilitBERT_plus_tokenizer.zip)
 
-To run the notebook you can unzip the downloaded file in the root of this repository.
+1. you can run the init script in the root of the repository to:
+   1. get the model without the Journal-Finder task dataset (you will be able to run the example_mlm notebook):
+    ```bash
+      chmod +x init.sh
+      ./init.sh --target model
+    ```
+    2. get the dataset without the ScilitBERT pre-trained model (you will not be able to run any of the notebook):
+   ```bash
+      chmod +x init.sh
+      ./init.sh --target dataset
+    ```
+    3. get both the model and the dataset (you will be able to run both the masked_mlm and the fine_tuning_journal_finder notebooks)
+    ```bash
+      chmod +x init.sh
+      ./init.sh --target both
+    ```
 
 2. Get access to a Jupyter environment
 
@@ -26,7 +40,7 @@ To run the notebook you can unzip the downloaded file in the root of this reposi
 pip install -r ./requirements.txt
 ```
 
-4. You can now run the notebook: [notebooks/example_mlm.ipynb](./notebooks/example_mlm.ipynb)
+5. You can now run the notebook: [notebooks/example_mlm.ipynb](./notebooks/example_mlm.ipynb)
 
 ## Fine-Tuning on the Journal Finder task
 + The dataset for the Journal Finder task is available here: [https://res.mdpi.com/data/journal-finder.zip](https://res.mdpi.com/data/journal-finder.zip)
