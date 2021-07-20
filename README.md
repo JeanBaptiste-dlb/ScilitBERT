@@ -39,20 +39,22 @@ ScilitBERT is a BERT model for academic language representation developed by [MD
 ```
 pip install -r ./requirements.txt
 ```
+## Masked token prediction
 
-5. You can now run the notebook: [notebooks/example_mlm.ipynb](./notebooks/example_mlm.ipynb)
+If you followed the getting started steps and used the init script to dwnload the model, you can now explore the notebook: [notebooks/example_mlm.ipynb](./notebooks/example_mlm.ipynb)
 
 ## Fine-Tuning on the Journal Finder task
-+ The dataset for the Journal Finder task is available here: [https://res.mdpi.com/data/journal-finder.zip](https://res.mdpi.com/data/journal-finder.zip)
 
 + A fine-tuning quick start notebook on the Journal Finder task is given: [fine tuning example](./notebooks/fine_tuning_journal_finder.ipynb)
 
-  
 The hyper-parameters can be managed in the fine-tune function found in [utils](./notebooks/utils.py).
+
+The fine tuned models are stored in the results folder (to rerun an experiment change the output folder or delete the previous output folder content.)
+
+A csv describing the model performances on the test set will be generated in the file /evaluation_results/journal_finder_output.csv the first row describes the f1-score the following rows describe the top-k macro averaged accuracies for k ranging from 1 to 10.
 
 ## Contribute
 You can contribute to this work by:
 
   + Helping to make the model ready for [publication on the Hugging Face model base](https://huggingface.co/transformers/model_sharing.html).
   + Finding good hyper-paremeters for the fine-tuning on the Journal-Finder task.
-
